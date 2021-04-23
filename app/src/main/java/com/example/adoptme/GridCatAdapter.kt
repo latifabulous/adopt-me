@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -12,6 +13,8 @@ class GridCatAdapter(val listCat: ArrayList<Cat>) : RecyclerView.Adapter<GridCat
 
     inner class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
+        var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): GridViewHolder {
@@ -20,10 +23,13 @@ class GridCatAdapter(val listCat: ArrayList<Cat>) : RecyclerView.Adapter<GridCat
     }
 
     override fun onBindViewHolder(holder: GridViewHolder, position: Int) {
+        val cat = listCat[position]
         Glide.with(holder.itemView.context)
-            .load(listCat[position].photo)
+            .load(cat.photo)
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
+        holder.tvName.text = cat.name
+        holder.tvDetail.text = cat.detail
     }
 
     override fun getItemCount(): Int {

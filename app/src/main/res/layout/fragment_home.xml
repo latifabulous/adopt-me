@@ -102,6 +102,7 @@
                             android:layout_height="wrap_content"
                             style="@style/CardMargin"
                             android:layout_marginRight="20dp"
+                            android:layout_gravity="center_vertical"
                             android:src="@drawable/weary_cat_face"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -118,7 +119,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
-
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/CardMargin"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/weary_cat_face"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -145,16 +152,103 @@
                                 android:textSize="12sp"
                                 android:textAllCaps="false"/>
                         </LinearLayout>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/CardMargin"
-                            android:layout_marginRight="20dp"
-                            android:src="@drawable/weary_cat_face"/>
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="0dp"
+            style="@style/CardMargin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_kucing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/CardMargin"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_kucing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/kucing"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_anjing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp">
+
+                    <ImageView
+                        style="@style/CardMargin"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_anjing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/anjing"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_ikan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/CardMargin"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/ic_ikan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/ikan"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 <!--        <Button-->
 <!--            android:id="@+id/btn_menu"-->
@@ -162,10 +256,19 @@
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content" />-->
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rek"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_cat"
+            android:id="@+id/rv_item"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_row_cat" />
+            tools:listitem="@layout/item_list" />
     </LinearLayout>
 </ScrollView>

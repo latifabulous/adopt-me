@@ -1,20 +1,23 @@
 package com.example.adoptme.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
-import android.widget.PopupMenu
+import android.widget.LinearLayout
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptme.*
 
 class HomeFragment : DialogFragment() {
+
     private lateinit var rvCat: RecyclerView
     private var list: ArrayList<Cat> = arrayListOf()
-//    private lateinit var btnMenu: Button
+
+    private lateinit var llKucing: LinearLayout
+    private lateinit var llAnjing: LinearLayout
+    private lateinit var llIkan: LinearLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +32,31 @@ class HomeFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        btnMenu = view.findViewById(R.id.btn_menu)
-//
-//        registerForContextMenu(btnMenu)
 
-        rvCat = view.findViewById(R.id.rv_cat)
+        llKucing = view.findViewById(R.id.ll_kucing)
+        llAnjing = view.findViewById(R.id.ll_anjing)
+        llIkan = view.findViewById(R.id.ll_ikan)
+
+        llKucing.setOnClickListener {
+            val kucingIntent = Intent(activity, ListHewanActivity::class.java)
+            kucingIntent.putExtra(ListHewanActivity.EXTRA_STATUS, 1)
+            startActivity(kucingIntent)
+        }
+
+        llAnjing.setOnClickListener {
+            val anjingIntent = Intent(activity, ListHewanActivity::class.java)
+            anjingIntent.putExtra(ListHewanActivity.EXTRA_STATUS, 2)
+            startActivity(anjingIntent)
+        }
+
+        llIkan.setOnClickListener {
+            val ikanIntent = Intent(activity, ListHewanActivity::class.java)
+            ikanIntent.putExtra(ListHewanActivity.EXTRA_STATUS, 3)
+            startActivity(ikanIntent)
+        }
+
+        rvCat = view.findViewById(R.id.rv_item)
         rvCat.setHasFixedSize(true)
-
 
         list.addAll(CatData.listData)
         showRecyclerList()
@@ -58,16 +79,6 @@ class HomeFragment : DialogFragment() {
          return super.onCreateOptionsMenu(menu, inflater)
     }
 
-//    override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo?
-//    ) {
-////        super.onCreateContextMenu(menu, v, menuInfo)
-//        getActivity()?.getMenuInflater()?.inflate(R.menu.recycler_menu, menu)
-//    }
-
-//    override fun onContextItemSelected(item: MenuItem): Boolean {
-//        setMode(item.itemId)
-//        return super.onContextItemSelected(item)
-//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         setMode(item.itemId)

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class ListCatAdapter(private val listCat: ArrayList<Cat>) : RecyclerView.Adapter<ListCatAdapter.ListViewHolder>() {
+class ListFishAdapter(private val listFish: ArrayList<Fish>) : RecyclerView.Adapter<ListFishAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
@@ -24,27 +24,25 @@ class ListCatAdapter(private val listCat: ArrayList<Cat>) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val cat = listCat[position]
+        val fish = listFish[position]
         Glide.with(holder.itemView.context)
-            .load(cat.photo)
+            .load(fish.photo)
             .apply(RequestOptions().override(55, 55))
             .into(holder.imgPhoto)
-        holder.tvName.text = cat.name
-        holder.tvDetail.text = cat.detail
+        holder.tvName.text = fish.name
+        holder.tvDetail.text = fish.detail
 
         holder.tvName.setOnClickListener {
             val context = it.context
-            val catDetailIntent = Intent(context, DetailHewanActivity::class.java)
-            catDetailIntent.putExtra(DetailHewanActivity.EXTRA_LIST, "Cat")
-            catDetailIntent.putExtra(DetailHewanActivity.EXTRA_POSITION, position)
-            context.startActivity(catDetailIntent)
+            val fishDetailIntent = Intent(context, DetailHewanActivity::class.java)
+            fishDetailIntent.putExtra(DetailHewanActivity.EXTRA_LIST, "Fish")
+            fishDetailIntent.putExtra(DetailHewanActivity.EXTRA_POSITION, position)
+            context.startActivity(fishDetailIntent)
         }
     }
 
-
-
     override fun getItemCount(): Int {
-        return listCat.size
+        return listFish.size
     }
 
 }

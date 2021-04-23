@@ -12,4 +12,9 @@
     <string name="card">Card</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kucing">Kucing</string>
+    <string name="anjing">Anjing</string>
+    <string name="ikan">Ikan</string>
+    <string name="rek">Rekomendasi</string>
+    <string name="nama">Nama</string>
 </resources>
