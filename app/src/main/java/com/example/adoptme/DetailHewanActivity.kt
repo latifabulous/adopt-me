@@ -1,12 +1,16 @@
 package com.example.adoptme
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DetailHewanActivity : AppCompatActivity() {
+class DetailHewanActivity : AppCompatActivity(), View.OnClickListener {
     private var catList: ArrayList<Cat> = arrayListOf()
     private var dogList: ArrayList<Dog> = arrayListOf()
     private var fishList: ArrayList<Fish> = arrayListOf()
@@ -23,9 +27,13 @@ class DetailHewanActivity : AppCompatActivity() {
         val listHewan = intent.getStringExtra(EXTRA_LIST)
         val position = intent.getIntExtra(EXTRA_POSITION, 0)
 
-        val tvItemName: TextView = findViewById(R.id.tv_item_name)
-        val tvItemPhoto: ImageView = findViewById(R.id.img_item_photo)
-        val tvItemDetail: TextView = findViewById(R.id.tv_item_detail)
+        val tvItemName : TextView = findViewById(R.id.tv_item_name)
+        val tvItemPhoto : ImageView = findViewById(R.id.img_item_photo)
+        val tvItemDetail : TextView = findViewById(R.id.tv_item_detail)
+
+        val btnTel : Button = findViewById(R.id.btn_tlp)
+
+        btnTel.setOnClickListener(this)
 
         when(listHewan){
             "Cat" -> {
@@ -48,6 +56,16 @@ class DetailHewanActivity : AppCompatActivity() {
                 tvItemName.setText(fishList[position].name)
                 tvItemPhoto.setImageResource(fishList[position].photo)
                 tvItemDetail.setText(fishList[position].detail)
+            }
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btn_tlp -> {
+                val phoneNumber = "087704620821"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
             }
         }
     }

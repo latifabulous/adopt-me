@@ -1,5 +1,6 @@
 package com.example.adoptme
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,14 @@ class GridCatAdapter(val listCat: ArrayList<Cat>) : RecyclerView.Adapter<GridCat
             .into(holder.imgPhoto)
         holder.tvName.text = cat.name
         holder.tvDetail.text = cat.detail
+
+        holder.tvName.setOnClickListener {
+            val context = it.context
+            val catDetailIntent = Intent(context, DetailHewanActivity::class.java)
+            catDetailIntent.putExtra(DetailHewanActivity.EXTRA_LIST, "Cat")
+            catDetailIntent.putExtra(DetailHewanActivity.EXTRA_POSITION, position)
+            context.startActivity(catDetailIntent)
+        }
     }
 
     override fun getItemCount(): Int {

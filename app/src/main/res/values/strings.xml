@@ -17,4 +17,16 @@
     <string name="ikan">Ikan</string>
     <string name="rek">Rekomendasi</string>
     <string name="nama">Nama</string>
+    <string name="nil">Nur Izza Latifah</string>
+    <string name="desc">Deskripsi</string>
+    <string name="sign_in">Sign In</string>
+    <string name="signup">Let\'s sign you in.</string>
+    <string name="signup2">Welcome back. \nYou\'ve be missed!</string>
+    <string name="uname">Username</string>
+    <string name="pass">Password</string>
+    <string name="email">Email</string>
+    <string name="don">Don\'t have an account?</string>
+    <string name="regis">Register</string>
+    <string name="signin">Sign In</string>
+    <string name="be_happy">BE HAPPY</string>
 </resources>
