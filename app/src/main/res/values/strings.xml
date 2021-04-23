@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AdoptMe</string>
+    <string name="adopt">Adopt</string>
+    <string name="me">Me</string>
+    <string name="slogan">Lets get some pets.</string>
+    <string name="c1">Sayang anak diskon \nkucing persia 40%</string>
+    <string name="browser">Explore</string>
+    <string name="nama_kucing">Nama Kucing</string>
+    <string name="detail">Detail</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="card">Card</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
