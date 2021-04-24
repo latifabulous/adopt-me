@@ -6,13 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.example.adoptme.R
 
-class SignUpProfileFragment : Fragment() {
+class SignUpProfileFragment : Fragment(), View.OnClickListener {
     lateinit var tvName: TextView
     lateinit var tvMessage: TextView
+    lateinit var btnMsg: Button
 
     var message: String? = null
 
@@ -34,6 +36,9 @@ class SignUpProfileFragment : Fragment() {
 
         tvName = view.findViewById(R.id.tv_name)
         tvMessage = view.findViewById(R.id.tv_message)
+        btnMsg = view.findViewById(R.id.btn_msg)
+
+        btnMsg.setOnClickListener(this)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -46,6 +51,15 @@ class SignUpProfileFragment : Fragment() {
             val uname = arguments?.getString(EXTRA_NAME)
             tvName.text = uname
             tvMessage.text = message
+        }
+    }
+
+    override fun onClick(v: View?) {
+        val homeFragment = HomeFragment()
+        fragmentManager?.beginTransaction()?.apply {
+            replace(R.id.fl_wrapper, homeFragment, HomeFragment::class.java.simpleName)
+            addToBackStack(null)
+            commit()
         }
     }
 }

@@ -39,7 +39,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
             bundle.putString(SignUpProfileFragment.EXTRA_NAME, "Halo " + etUname.text.toString())
 
-            val message = "Sungguh sebuah anugerah kepadamu yang luar biasa ini. " + etUname.text.toString() + ", email verivikasi telah dikirim ya! ke " + etEmail.text.toString()
+            val message = "Sungguh sebuah anugerah kepadamu yang luar biasa ini. " + etUname.text.toString() + ", email verifikasi telah dikirim ya! ke " + etEmail.text.toString()
 
             signUpProfileFragment.arguments = bundle
             signUpProfileFragment.message = message

@@ -120,12 +120,12 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             style="@style/CardMargin"
                             android:layout_marginRight="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/weary_cat_face"/>
+                            android:src="@drawable/ic_heart_eyes"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -134,11 +134,11 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginBottom="30dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="@string/c1"
+                                android:text="@string/c2"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
                             <Button
@@ -147,7 +147,7 @@
                                 android:text="@string/browser"
                                 android:fontFamily="@font/poppins_semibold"
                                 android:background="@drawable/ic_btn_c1"
-                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
                                 android:layout_marginBottom="20dp"
                                 android:textSize="12sp"
                                 android:textAllCaps="false"/>

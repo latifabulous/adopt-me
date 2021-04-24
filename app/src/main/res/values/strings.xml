@@ -3,7 +3,9 @@
     <string name="adopt">Adopt</string>
     <string name="me">Me</string>
     <string name="slogan">Lets get some pets.</string>
-    <string name="c1">Sayang anak diskon \nkucing persia 40%</string>
+    <string name="c1">Sayang anak adopsi \nkucing persia cepad</string>
+    <string name="c2">Di bulan puasa diskon \nadopsi hewan 10%</string>
+
     <string name="browser">Explore</string>
     <string name="nama_kucing">Nama Kucing</string>
     <string name="detail">Detail</string>
@@ -11,14 +13,13 @@
     <string name="grid">Grid</string>
     <string name="card">Card</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="kucing">Kucing</string>
     <string name="anjing">Anjing</string>
     <string name="ikan">Ikan</string>
-    <string name="rek">Rekomendasi</string>
+    <string name="rek">Recomendation</string>
     <string name="nama">Nama</string>
     <string name="nil">Nur Izza Latifah</string>
-    <string name="desc">Deskripsi</string>
+    <string name="desc">Description</string>
     <string name="sign_in">Sign In</string>
     <string name="signup">Let\'s sign you in.</string>
     <string name="signup2">Welcome back. \nYou\'ve be missed!</string>
@@ -29,4 +30,7 @@
     <string name="regis">Register</string>
     <string name="signin">Sign In</string>
     <string name="be_happy">BE HAPPY</string>
+    <string name="pemilik">Owner</string>
+    <string name="we_re_so_sorry">We\'re so sorry.</string>
+    <string name="under_construction">Under Construction</string>
 </resources>

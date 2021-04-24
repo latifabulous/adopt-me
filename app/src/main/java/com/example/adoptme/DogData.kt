@@ -2,21 +2,30 @@ package com.example.adoptme
 
 object DogData {
     private val dogNames = arrayOf(
-        "Tabi",
-        "Mochy",
-        "Macarons"
+        "Abert",
+        "Berkely",
+        "Dixie",
+        "Islen",
+        "Fuzzy",
+        "Aiko"
     )
 
     private val dogDetails = arrayOf(
-        "Buntel",
-        "Oren",
-        "Kitty"
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet"
     )
 
     private val dogImages = intArrayOf(
-        R.drawable.kucing1,
-        R.drawable.kucing2,
-        R.drawable.kucing3
+        R.drawable.anjing1,
+        R.drawable.anjing2,
+        R.drawable.anjing3,
+        R.drawable.anjing4,
+        R.drawable.anjing5,
+        R.drawable.anjing6
     )
 
     val listData: ArrayList<Dog>

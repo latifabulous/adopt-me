@@ -34,7 +34,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/tv_item_name"
@@ -66,15 +66,29 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/weary_cat_face"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/nil"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/nil"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/pemilik"
+                    android:textColor="@color/gray_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/btn_tlp"
@@ -113,6 +127,26 @@
 
 
 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
 
+                    <Button
+                        android:id="@+id/btn_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adopt"
+                        android:height="55dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16dp"
+                        android:background="@drawable/ic_btn_c1"
+                        />
+                </LinearLayout>
             </FrameLayout>
 </LinearLayout>
